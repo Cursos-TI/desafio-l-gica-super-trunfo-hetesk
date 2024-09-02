@@ -34,7 +34,7 @@ int main() {
     // Exemplo:
     // printf("Digite o código da cidade: ");
     // scanf("%s", codigo);
-    printf("\nINSIRA OS DADOS DA CARTA A");
+    printf("\n ******** INSIRA OS DADOS DA CARTA A");
     printf("\nCodigo da cidade > ");
     scanf("%d", &Acodcidade); // esse curso poderia ensinar que o & serve para fornescer o ponteiro de armazenamento da variavel
 
@@ -54,7 +54,7 @@ int main() {
     scanf("%d", &Anpontoturistico);
 
 
-    printf("\n\n\n\  ********     n\n\n\nINSIRA OS DADOS DA CARTA B");
+    printf("\n\n\n\n\n\n ******** INSIRA OS DADOS DA CARTA B \n");
     printf("\nCodigo da cidade > ");
     scanf("%d", &Bcodcidade); // esse curso poderia ensinar que o & serve para fornescer o ponteiro de armazenamento da variavel
 
@@ -73,14 +73,21 @@ int main() {
     printf("\nNumero de pontos turísticos > ");
     scanf("%d", &Bnpontoturistico);
 
+    printf("\n\n\n\n\n\n *******RESULTADO******* \n\n\n\n\n\n" );
 
 if (Apib > Bpib) 
-	{printf("CARTA A VENCEDORA POIS TEM MAIOR PIB");}
+	{printf("Carta A da cidade %s e a vencedora pois seu PIB e maior com o valor: %d", Anome, Apib);}
     else 
-	{printf("CARTA A VENCEDORA POIS TEM MAIOR PIB");};
+		{if (Apib < Bpib)  
+			{
+				printf("Carta B da cidade %s e a vencedora pois seu PIB e maior com o valor: %d", Bnome, Bpib);}
+			else
+				{printf("AS CARTAS A E B EMPATARAM, elas possuem o mesmo PIB no valor de: %d",Bpib);}
+		} ;
+		
 	
 
-
+    printf("\n\n\n\n\n\n ******* FIM DO DO SUPER TRUNFO ******* \n\n\n\n\n\n" );
     // (Repita para cada propriedade)
 
     // Comparação de Cartas:
@@ -102,3 +109,4 @@ if (Apib > Bpib)
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     return 0;
+}
